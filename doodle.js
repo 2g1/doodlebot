@@ -282,6 +282,10 @@ commands = {
 	},
 	//get a captcha
 	captcha : function(a,m){
+		if(servers[m.guild.id] == undefined || servers[m.guild.id].captchaRole == undefined){
+			m.reply("The captcha system has not been set up for this server. Please contact a server administrator.");
+			return;
+		};
 		var captcha = ccap();
 		var ary = captcha.get();
 		var text = ary[0];
@@ -291,6 +295,10 @@ commands = {
 	},
 	//solve the captcha
 	solve : function(a,m){
+		if(servers[m.guild.id] == undefined || servers[m.guild.id].captchaRole == undefined){
+			m.reply("The captcha system has not been set up for this server. Please contact a server administrator.");
+			return;
+		};
 		var guess = m.content.slice(6).toUpperCase().replace(/(\[|\]|\ )/g, "");
 		if(m.member == undefined){return;};
 		if(captchas[m.author.id] == undefined){
@@ -355,7 +363,7 @@ function saveData(){
 	try{
 		console.log("Saving server configurations.");
 		var str = JSON.stringify(servers);
-		fs.writeFile("./servers.js", str, function(err){
+		fs.writeFile("./doodle/servers.js", str, function(err){
 			if(err){
                                 console.log("Error saving server configurations:\n"+err.message);
                         }else{
