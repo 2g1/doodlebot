@@ -1,25 +1,33 @@
-# doodlebot
-A helpful bot that adds captchas to discord, and a few other things
+# doodle
+A helpful bot for Discord that adds a variety of features useful for running a server.
 
-## What are the requirements for this?
-Node, NPM, Discord.JS, Node-Opus, INI, and CCAP.
-Simply run `depenencies.sh` and you're good to go!
+## Requirements
+* Node
+* NPM
+* Discord.JS
+* INI
+* CCAP.
+Running `depenencies.sh` will automatically install these for you.
 
-Once that's done you can move on to configuring the bot. This is all done in the `config.ini`
+## Setting up the bot
 
-## Bot ID, Bot Token, and User ID
+After installing, `config/config.ini` should be edited to set up the bot.
 
-First of you'll need a bot, follow this nice guide to make one: 
+First, you will need to create a bot. You can follow this guide to do so:
 https://github.com/Just-Some-Bots/MusicBot/wiki/FAQ#how-do-i-create-a-bot-account
 
-For the Bot Token, You can find this on your bots app page!
+The three configuration settings that will need to be changed are `BotID`, `Token`, and `UserID`.
 
-For the User ID, enable developer view in your options (setting->appearance->developer mode)
-Right click yourself, and click `Copy ID`
+Your `BotID` and `Token` can be found on your bot's application page under the "APP BOT USER" section.
+![Help Image](http://i.imgur.com/NO5h19G.png)
 
-For the Bot ID, it's the same as the User ID but you need it in your server first. Add it by following
-this nice guide: https://github.com/Just-Some-Bots/MusicBot/wiki/FAQ#how-do-i-add-my-bot-account-to-a-server
+`UserID` is **your** Discord user ID. This is needed to give you access to developer-only commands. To find this, enable developer view in your discord options (setting->appearance->developer mode). Afterwards, right click on your name either on a message that you've sent, or on your name in a server's members list, and click `Copy ID`.
+(The BotID can also be acquired like this by right clicking on the bot's name instead of your own)
+
+Finally, you can add the bot to a server by following this guide:
+https://github.com/Just-Some-Bots/MusicBot/wiki/FAQ#how-do-i-add-my-bot-account-to-a-server
+
 
 ## Optional Things
 
-Optionally, you can change the command prefix in `config.ini`, but as default it is `%`
+Optionally, the command prefix can be changed in `config.ini`. (The default is `%`)
