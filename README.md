@@ -1,6 +1,12 @@
 # doodle
 A helpful bot for Discord that adds a variety of features useful for running a server.
 
+## Features
+* Captcha
+* Message Snooping
+* Reactions (Planned)
+* Drawing prompts (Planned)
+
 ## Requirements
 * Node
 * NPM
